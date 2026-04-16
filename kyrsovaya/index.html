@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON FACTORY | Спортивный клуб</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- ========== ШАПКА ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                🔩 IRON<span>FACTORY</span>
+            </div>
+            <nav class="nav">
+                <a href="#" id="mainLink">Главная</a>
+                <a href="#" id="trainingsLink">Тренировки</a>
+                <a href="#" id="subscriptionsLink">Абонементы</a>
+                <a href="#" id="contactsLink">Контакты</a>
+                <a href="#" id="profileLink">👤 ЛИЧНЫЙ КАБИНЕТ</a>
+                <a href="#" id="bookingLink" style="color: #cc0000;">📝 ЗАПИСЬ</a>
+            </nav>
+            <div id="authStatus" class="auth-status">
+                <span id="userNameDisplay"></span>
+                <button id="logoutBtn" class="logout-btn" style="display: none;">🚪 ВЫЙТИ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
+    <div id="mainPage">
+        <section class="hero">
+            <h1>ДОБРО ПОЖАЛОВАТЬ В IRON FACTORY</h1>
+            <p>Куем железо. Куем характер. Куем победу.</p>
+            <a href="#" class="btn" id="heroBtn">ЗАПИСАТЬСЯ →</a>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Популярные тренировки</h2>
+                <p class="section-subtitle">Выбери направление, которое разбудит твоего внутреннего воина</p>
+                
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🥊</div>
+                        <h3>БОКС</h3>
+                        <p>Развитие реакции, силы духа и физической выносливости.</p>
+                        <div class="card-footer">
+                            <span class="price">500 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Бокс">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🏋️</div>
+                        <h3>КРОССФИТ</h3>
+                        <p>Функциональный тренинг для всего тела. Прокачай силу и выносливость.</p>
+                        <div class="card-footer">
+                            <span class="price">450 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Кроссфит">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🌸</div>
+                        <h3>ЙОГА</h3>
+                        <p>Гармония тела и духа. Гибкость, дыхание, контроль над собой.</p>
+                        <div class="card-footer">
+                            <span class="price">400 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Боевая йога">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🏀</div>
+                        <h3>БАСКЕТБОЛ</h3>
+                        <p>Командная игра, ловкость, стратегия. Присоединяйся к команде!</p>
+                        <div class="card-footer">
+                            <span class="price">550 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Баскетбол">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🏃</div>
+                        <h3>ФУНКЦИОНАЛКА</h3>
+                        <p>Интенсивные интервальные тренировки для жиросжигания и рельефа.</p>
+                        <div class="card-footer">
+                            <span class="price">480 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Функционалка">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 30px;">🥋</div>
+                        <h3>ЕДИНОБОРСТВА</h3>
+                        <p>Самбо, дзюдо, борьба. Техника, тактика, дисциплина и характер.</p>
+                        <div class="card-footer">
+                            <span class="price">600 ₽</span>
+                            <a href="#" class="btn-small book-training" data-training="Единоборства">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <p class="section-subtitle">IRON FACTORY — это больше, чем просто спортзал</p>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon" style="font-size: 45px;">🥇</div>
+                        <h4>ТИТУЛОВАННЫЕ ТРЕНЕРЫ</h4>
+                        <p>Мастера спорта, чемпионы России и Европы</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon" style="font-size: 45px;">⚙️</div>
+                        <h4>ПРЕМИУМ ОБОРУДОВАНИЕ</h4>
+                        <p>Лучшие тренажеры мировых брендов</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon" style="font-size: 45px;">⏰</div>
+                        <h4>КРУГЛОСУТОЧНЫЙ ДОСТУП</h4>
+                        <p>24/7 без выходных и праздников</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon" style="font-size: 45px;">💰</div>
+                        <h4>ГИБКИЕ ЦЕНЫ</h4>
+                        <p>Абонементы на любой бюджет, рассрочка 0%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ========== СТРАНИЦА РАСПИСАНИЯ ========== -->
+    <div id="trainingsPage" style="display: none;">
+        <div class="container">
+            <h1 class="page-title">⚡ РАСПИСАНИЕ ТРЕНИРОВОК ⚡</h1>
+            <p class="page-desc">Выбери удобное время и начинай ковать железо</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>ВРЕМЯ</th><th>ПН</th><th>ВТ</th><th>СР</th><th>ЧТ</th><th>ПТ</th><th>СБ</th><th>ВС</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="time-cell">10:00</td><td>🥊 БОКС<br><span class="badge badge-green">8 мест</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-green">5 мест</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">10 мест</span></td><td>🥊 БОКС<br><span class="badge badge-red">2 места</span></td><td>🏃 ФУНКЦИОНАЛКА<br><span class="badge badge-green">7 мест</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">12 мест</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">10 мест</span></td></tr>
+                        <tr><td class="time-cell">14:00</td><td>🥊 БОКС<br><span class="badge badge-green">6 мест</span></td><td>🏀 БАСКЕТБОЛ<br><span class="badge badge-green">9 мест</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-green">4 места</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-green">6 мест</span></td><td>🥊 БОКС<br><span class="badge badge-green">5 мест</span></td><td>🏀 БАСКЕТБОЛ<br><span class="badge badge-green">10 мест</span></td><td>🥊 БОКС<br><span class="badge badge-green">7 мест</span></td></tr>
+                        <tr><td class="time-cell">18:00</td><td>🏋️ КРОССФИТ<br><span class="badge badge-red">1 место</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">8 мест</span></td><td>🥊 БОКС<br><span class="badge badge-green">5 мест</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">7 мест</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-red">2 места</span></td><td>🥊 БОКС<br><span class="badge badge-green">6 мест</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-green">5 мест</span></td></tr>
+                        <tr><td class="time-cell">20:00</td><td>🏀 БАСКЕТБОЛ<br><span class="badge badge-green">7 мест</span></td><td>🥊 БОКС<br><span class="badge badge-green">4 места</span></td><td>🏀 БАСКЕТБОЛ<br><span class="badge badge-green">8 мест</span></td><td>🏋️ КРОССФИТ<br><span class="badge badge-green">5 мест</span></td><td>🌸 ЙОГА<br><span class="badge badge-green">6 мест</span></td><td>🥋 ЕДИНОБОРСТВА<br><span class="badge badge-green">4 места</span></td><td>🏀 БАСКЕТБОЛ<br><span class="badge badge-green">8 мест</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА АБОНЕМЕНТОВ ========== -->
+    <div id="subscriptionsPage" style="display: none;">
+        <div class="container">
+            <h1 class="page-title">💎 НАШИ АБОНЕМЕНТЫ 💎</h1>
+            <p class="page-desc">Выбери тариф, который подходит именно тебе</p>
+            <div class="subscriptions-grid">
+                <div class="subscription-card"><div class="subscription-badge">🔥 ПОПУЛЯРНЫЙ</div><div class="subscription-icon">🏃</div><h3>ЛАЙТ</h3><div class="subscription-price">3 900 ₽<span>/месяц</span></div><ul class="subscription-features"><li>✅ 8 тренировок в месяц</li><li>✅ Тренажерный зал</li><li>✅ Раздевалка + душ</li><li>❌ Групповые занятия</li><li>❌ Персональный тренер</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+                <div class="subscription-card featured"><div class="subscription-badge">⭐ ЛУЧШИЙ ВЫБОР</div><div class="subscription-icon">💪</div><h3>СТАНДАРТ</h3><div class="subscription-price">5 900 ₽<span>/месяц</span></div><ul class="subscription-features"><li>✅ БЕЗЛИМИТ тренировок</li><li>✅ Тренажерный зал</li><li>✅ Групповые занятия</li><li>✅ Раздевалка + душ + сауна</li><li>❌ Персональный тренер</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+                <div class="subscription-card"><div class="subscription-badge">👑 VIP СТАТУС</div><div class="subscription-icon">🏆</div><h3>ПРЕМИУМ</h3><div class="subscription-price">9 900 ₽<span>/месяц</span></div><ul class="subscription-features"><li>✅ БЕЗЛИМИТ тренировок</li><li>✅ Тренажерный зал</li><li>✅ Групповые занятия</li><li>✅ Персональный тренер</li><li>✅ Раздевалка + душ + сауна + массаж</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+                <div class="subscription-card"><div class="subscription-badge">🌅 ЭКОНОМ</div><div class="subscription-icon">☀️</div><h3>ДНЕВНОЙ</h3><div class="subscription-price">2 900 ₽<span>/месяц</span></div><ul class="subscription-features"><li>✅ БЕЗЛИМИТ тренировок</li><li>✅ С 09:00 до 17:00</li><li>✅ Тренажерный зал</li><li>✅ Раздевалка + душ</li><li>❌ Вечерние часы</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+                <div class="subscription-card"><div class="subscription-badge">🌙 24/7</div><div class="subscription-icon">🌙</div><h3>НОЧНОЙ</h3><div class="subscription-price">4 500 ₽<span>/месяц</span></div><ul class="subscription-features"><li>✅ БЕЗЛИМИТ тренировок</li><li>✅ С 22:00 до 08:00</li><li>✅ Тренажерный зал</li><li>✅ Персональный шкафчик</li><li>✅ Круглосуточный доступ</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+                <div class="subscription-card"><div class="subscription-badge">💎 МАКСИМУМ</div><div class="subscription-icon">📅</div><h3>ГОДОВОЙ</h3><div class="subscription-price">49 900 ₽<span>/год</span></div><ul class="subscription-features"><li>✅ БЕЗЛИМИТ тренировок</li><li>✅ ВСЕ направления</li><li>✅ Персональный тренер</li><li>✅ Заморозка до 60 дней</li><li>✅ 2 месяца в подарок</li></ul><button class="btn-subscribe">ВЫБРАТЬ</button></div>
+            </div>
+            <div class="subscriptions-info">
+                <div class="info-box"><div class="info-icon">❓</div><h4>ОСТАЛИСЬ ВОПРОСЫ?</h4><p>Звони: +7 (999) 777-88-99</p></div>
+                <div class="info-box"><div class="info-icon">💳</div><h4>РАССРОЧКА 0%</h4><p>Оплачивай абонемент частями без переплаты</p></div>
+                <div class="info-box"><div class="info-icon">🎁</div><h4>ПРОБНОЕ ЗАНЯТИЕ</h4><p>Первая тренировка бесплатно</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА КОНТАКТОВ ========== -->
+    <div id="contactsPage" style="display: none;">
+        <div class="container">
+            <h1 class="page-title">📞 НАШИ КОНТАКТЫ 📞</h1>
+            <p class="page-desc">Всегда на связи. Приезжай или звони!</p>
+            <div class="contacts-grid">
+                <div class="contacts-info">
+                    <div class="contact-block"><div class="contact-icon">📍</div><div><h4>АДРЕС</h4><p>г. Москва, ул. Железная, 15</p></div></div>
+                    <div class="contact-block"><div class="contact-icon">📞</div><div><h4>ТЕЛЕФОН</h4><p>+7 (999) 777-88-99</p></div></div>
+                    <div class="contact-block"><div class="contact-icon">✉️</div><div><h4>EMAIL</h4><p>ironfactory@club.ru</p></div></div>
+                    <div class="contact-block"><div class="contact-icon">🕐</div><div><h4>РЕЖИМ РАБОТЫ</h4><p>24/7 БЕЗ ВЫХОДНЫХ</p></div></div>
+                    <div class="contact-block"><div class="contact-icon">🚇</div><div><h4>КАК ДОБРАТЬСЯ</h4><p>М. Курская, выход к ТЦ "Сталь"</p></div></div>
+                    <div class="contact-block"><div class="contact-icon">📱</div><div><h4>СОЦСЕТИ</h4><p>📷 @ironfactory | 💬 iron_factory</p></div></div>
+                </div>
+                <div class="contacts-map"><div class="map-placeholder"><div class="map-icon">🗺️</div><p>К А Р Т А &nbsp; П Р О Е З Д А</p><small>г. Москва, ул. Железная, 15</small></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА ЗАПИСИ ========== -->
+    <div id="bookingPage" style="display: none;">
+        <div class="container">
+            <div class="booking-header">
+                <h1 class="page-title">📝 ЗАПИСЬ НА ТРЕНИРОВКУ</h1>
+                <p class="page-desc">Заполни форму, и мы свяжемся с тобой для подтверждения</p>
+            </div>
+            <div class="booking-modern-wrapper">
+                <div class="booking-modern-form">
+                    <form id="bookingForm" class="booking-modern">
+                        <div class="form-row-modern">
+                            <div class="form-group-modern"><label>👤 ФИО *</label><input type="text" id="fullname" placeholder="Иванов Иван Иванович" required></div>
+                            <div class="form-group-modern"><label>📞 Телефон *</label><input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required></div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern"><label>✉️ Email</label><input type="email" id="email" placeholder="example@mail.ru"></div>
+                            <div class="form-group-modern"><label>📅 Выбери дату *</label><input type="date" id="date" required></div>
+                        </div>
+                        <div class="form-group-modern full-width">
+                            <label>🥋 Выбери тренировку *</label>
+                            <div class="training-select-modern">
+                                <select id="trainingSelect" required>
+                                    <option value="">-- Выбери направление --</option>
+                                    <option value="Бокс">🥊 Бокс - 500 ₽</option>
+                                    <option value="Кроссфит">🏋️ Кроссфит - 450 ₽</option>
+                                    <option value="Боевая йога">🌸 Йога - 400 ₽</option>
+                                    <option value="Баскетбол">🏀 Баскетбол - 550 ₽</option>
+                                    <option value="Функционалка">🏃 Функционалка - 480 ₽</option>
+                                    <option value="Единоборства">🥋 Единоборства - 600 ₽</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group-modern full-width"><label>💬 Комментарий</label><textarea id="comment" rows="3" placeholder="Пожелания, вопросы..."></textarea></div>
+                        <div class="booking-checkbox"><input type="checkbox" id="agree" required><label for="agree">Я согласен с <a href="#">условиями обработки данных</a></label></div>
+                        <div class="form-buttons-modern"><button type="submit" class="btn-submit-modern">✏️ ОТПРАВИТЬ ЗАЯВКУ</button><button type="reset" class="btn-reset-modern">🗑️ ОЧИСТИТЬ</button></div>
+                    </form>
+                </div>
+                <div class="booking-modern-info">
+                    <div class="info-card"><div class="info-card-icon">⚡</div><h3>ПОСЛЕ ЗАПИСИ</h3><ul><li>✅ С тобой свяжется администратор</li><li>✅ Подтвердит время и дату</li><li>✅ Расскажет о стоимости абонемента</li></ul></div>
+                    <div class="info-card"><div class="info-card-icon">⚠️</div><h3>ВАЖНО</h3><ul><li>Отмена записи - за 2 часа</li><li>Опаздывать не более 10 минут</li><li>С собой: сменная обувь, вода</li></ul></div>
+                    <div class="info-card"><div class="info-card-icon">📞</div><h3>КОНТАКТЫ</h3><ul><li>+7 (999) 777-88-99</li><li>ironfactory@club.ru</li><li>Telegram: @ironfactory</li></ul></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ЛИЧНЫЙ КАБИНЕТ ========== -->
+    <div id="profilePage" style="display: none;">
+        <div class="container">
+            <h1 class="page-title">👤 ЛИЧНЫЙ КАБИНЕТ</h1>
+            <p class="page-desc" id="profileWelcomeText">Добро пожаловать!</p>
+            <div class="profile-grid">
+                <div class="profile-info">
+                    <div class="profile-avatar"><div class="avatar-icon">💪</div><h3 id="profileName">Алексей Железный</h3><p class="profile-status">🔥 Активный клиент</p></div>
+                    <div class="profile-details">
+                        <div class="detail-item"><span class="detail-icon">📞</span><div><p class="detail-label">Телефон</p><p class="detail-value" id="profilePhone">+7 (999) 123-45-67</p></div></div>
+                        <div class="detail-item"><span class="detail-icon">✉️</span><div><p class="detail-label">Email</p><p class="detail-value" id="profileEmail">alexey@ironfactory.ru</p></div></div>
+                        <div class="detail-item"><span class="detail-icon">🎂</span><div><p class="detail-label">Дата рождения</p><p class="detail-value" id="profileBirthday">15.03.1995</p></div></div>
+                        <div class="detail-item"><span class="detail-icon">📅</span><div><p class="detail-label">Регистрация</p><p class="detail-value" id="profileRegDate">01.01.2024</p></div></div>
+                    </div>
+                    <button class="btn-edit-profile" id="editProfileBtn">✏️ РЕДАКТИРОВАТЬ</button>
+                </div>
+                <div class="profile-bookings">
+                    <div class="profile-tabs"><button class="profile-tab active" data-tab="active">АКТИВНЫЕ ЗАПИСИ</button><button class="profile-tab" data-tab="history">ИСТОРИЯ</button></div>
+                    <div id="activeBookings" class="profile-bookings-list"><div class="booking-item"><div class="booking-info"><div class="booking-icon">🥊</div><div><h4>Бокс</h4><p>18.04.2026 | 18:00</p></div></div><button class="btn-cancel-booking" onclick="cancelBooking(this)">ОТМЕНИТЬ</button></div><div class="booking-item"><div class="booking-info"><div class="booking-icon">🏋️</div><div><h4>Кроссфит</h4><p>20.04.2026 | 14:00</p></div></div><button class="btn-cancel-booking" onclick="cancelBooking(this)">ОТМЕНИТЬ</button></div></div>
+                    <div id="historyBookings" class="profile-bookings-list" style="display: none;"><div class="booking-item history"><div class="booking-info"><div class="booking-icon">🌸</div><div><h4>Йога</h4><p>10.04.2026 | 10:00</p><span class="status-completed">✓ ПОСЕЩЕНО</span></div></div></div><div class="booking-item history"><div class="booking-info"><div class="booking-icon">🏀</div><div><h4>Баскетбол</h4><p>05.04.2026 | 20:00</p><span class="status-completed">✓ ПОСЕЩЕНО</span></div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== МОДАЛЬНЫЕ ОКНА ========== -->
+    <div id="authModal" class="modal">
+        <div class="modal-content modern-auth-modal">
+            <div class="modern-auth-header"><h2>🔩 IRON FACTORY</h2><p>Войди или зарегистрируйся</p></div>
+            <div class="modern-auth-body">
+                <form id="loginForm">
+                    <div class="modern-input-group"><label>📧 Email</label><div class="input-icon"><span>✉️</span><input type="email" id="loginEmail" placeholder="example@mail.ru" required></div></div>
+                    <div class="modern-input-group"><label>🔒 Пароль</label><div class="input-icon"><span>🔑</span><input type="password" id="loginPassword" placeholder="Введите пароль" required></div></div>
+                    <button type="submit" class="modern-btn">ВОЙТИ</button>
+                    <div class="modern-divider">или</div>
+                    <div class="modern-social-buttons"><button type="button" class="modern-social-btn" onclick="alert('Демо-вход через Google')">📧 Google</button><button type="button" class="modern-social-btn" onclick="alert('Демо-вход через Telegram')">📱 Telegram</button></div>
+                    <div class="modern-switch">Нет аккаунта? <a id="showRegisterBtn">Зарегистрироваться</a></div>
+                </form>
+                <form id="registerForm" style="display: none;">
+                    <div class="modern-input-group"><label>👤 ФИО</label><div class="input-icon"><span>👤</span><input type="text" id="regFullname" placeholder="Иванов Иван Иванович" required></div></div>
+                    <div class="modern-input-group"><label>📞 Телефон</label><div class="input-icon"><span>📱</span><input type="tel" id="regPhone" placeholder="+7 (999) 123-45-67" required></div></div>
+                    <div class="modern-input-group"><label>📧 Email</label><div class="input-icon"><span>✉️</span><input type="email" id="regEmail" placeholder="example@mail.ru" required></div></div>
+                    <div class="modern-input-group"><label>🎂 Дата рождения</label><div class="input-icon"><span>🎂</span><input type="date" id="regBirthday"></div></div>
+                    <div class="modern-input-group"><label>🔒 Пароль</label><div class="input-icon"><span>🔑</span><input type="password" id="regPassword" placeholder="Минимум 6 символов" required></div></div>
+                    <div class="modern-input-group"><label>🔒 Подтверждение</label><div class="input-icon"><span>✓</span><input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required></div></div>
+                    <button type="submit" class="modern-btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    <div class="modern-switch">Уже есть аккаунт? <a id="showLoginBtn">Войти</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="subscriptionModal" class="modal">
+        <div class="modal-content modern-auth-modal" style="max-width: 500px; max-height: 85vh; overflow-y: auto;">
+            <div class="modern-auth-header" style="padding: 20px 25px;"><h2 style="font-size: 24px;">💎 ОФОРМЛЕНИЕ АБОНЕМЕНТА</h2><p style="font-size: 13px;">Заполни данные для покупки</p></div>
+            <div class="modern-auth-body" style="padding: 20px 25px;">
+                <form id="subscriptionPurchaseForm">
+                    <div class="modern-input-group"><label>👤 ФИО *</label><div class="input-icon"><span>👤</span><input type="text" id="subFullname" placeholder="Иванов Иван Иванович" required></div></div>
+                    <div class="modern-input-group"><label>📞 Телефон *</label><div class="input-icon"><span>📱</span><input type="tel" id="subPhone" placeholder="+7 (999) 123-45-67" required></div></div>
+                    <div class="modern-input-group"><label>📧 Email</label><div class="input-icon"><span>✉️</span><input type="email" id="subEmail" placeholder="example@mail.ru"></div></div>
+                    <div class="modern-input-group"><label>💳 Способ оплаты *</label><div class="input-icon"><span>💳</span><select id="subPayment" required><option value="">-- Выберите --</option><option value="card">💳 Банковская карта</option><option value="cash">💵 Наличные в клубе</option><option value="installment">📅 Рассрочка 0%</option></select></div></div>
+                    <div class="modern-input-group"><label>📅 Срок абонемента</label><div class="input-icon"><span>📅</span><select id="subDuration"><option value="1">1 месяц</option><option value="3">3 месяца (скидка 5%)</option><option value="6">6 месяцев (скидка 10%)</option><option value="12">12 месяцев (скидка 15%)</option></select></div></div>
+                    <div class="modern-input-group"><label>🎁 Промокод</label><div class="input-icon"><span>🎟️</span><input type="text" id="subPromo" placeholder="IRON10 = скидка 10%"></div></div>
+                    <div id="subTotalPrice" style="background:#f5f5f5;padding:12px;border-radius:12px;margin:15px 0;text-align:center"><span>Итого к оплате:</span><span style="font-size:22px;font-weight:bold;color:#cc0000;margin-left:10px" id="subTotalAmount">0 ₽</span></div>
+                    <button type="submit" class="modern-btn" style="padding: 12px;">💎 ОПЛАТИТЬ АБОНЕМЕНТ</button>
+                    <button type="button" id="closeSubModal" class="modern-btn" style="background:#666;margin-top:8px;padding: 12px;">❌ ОТМЕНА</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✅</div>
+            <h2>АБОНЕМЕНТ АКТИВИРОВАН!</h2>
+            <p>Спасибо за покупку в IRON FACTORY</p>
+            <div class="success-details">
+                <div class="detail-row"><span>🏷️ Абонемент:</span><strong id="successSubscription">—</strong></div>
+                <div class="detail-row"><span>💰 Сумма:</span><strong id="successAmount">—</strong></div>
+                <div class="detail-row"><span>📅 Срок:</span><strong id="successDuration">—</strong></div>
+                <div class="detail-row"><span>💳 Оплата:</span><strong id="successPayment">—</strong></div>
+                <div class="detail-row"><span>📅 Действует до:</span><strong id="successValidUntil">—</strong></div>
+            </div>
+            <div class="success-message"><p>🎉 Поздравляем! Абонемент успешно активирован.</p><p>Ждём вас на тренировках в IRON FACTORY!</p><p class="success-quote">🔩 Куем железо. Куем характер. Куем победу.</p></div>
+            <button class="success-btn" id="closeSuccessModal">ОТЛИЧНО!</button>
+        </div>
+    </div>
+
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content"><div class="modal-header"><h2>✏️ РЕДАКТИРОВАНИЕ</h2><span class="modal-close edit-modal-close">&times;</span></div>
+        <div class="modal-body"><form id="editProfileForm"><div class="form-group"><label>👤 ФИО</label><input type="text" id="editFullname"></div><div class="form-group"><label>📞 Телефон</label><input type="tel" id="editPhone"></div><div class="form-group"><label>📧 Email</label><input type="email" id="editEmail"></div><div class="form-group"><label>🎂 Дата рождения</label><input type="date" id="editBirthday"></div><div class="modal-buttons"><button type="submit" class="btn-submit">СОХРАНИТЬ</button><button type="button" class="btn-cancel edit-modal-cancel">ОТМЕНА</button></div></form></div></div>
+    </div>
+
+    <!-- ========== СТРАНИЦЫ СОЦСЕТЕЙ ========== -->
+    <div id="facebookPage" style="display: none;">
+        <div class="container">
+            <div class="social-page-header">
+                <div class="social-page-icon">📘</div>
+                <h1 class="social-page-title">IRON FACTORY в Facebook</h1>
+                <p class="social-page-desc">Присоединяйся к нашему сообществу!</p>
+            </div>
+            <div class="social-page-content">
+                <div class="social-stats">
+                    <div class="stat-card"><div class="stat-number">15 234</div><div class="stat-label">Подписчиков</div></div>
+                    <div class="stat-card"><div class="stat-number">1 847</div><div class="stat-label">Лайков</div></div>
+                    <div class="stat-card"><div class="stat-number">568</div><div class="stat-label">Постов</div></div>
+                </div>
+                <div class="social-description"><h3>📘 О нашей странице</h3><p>Официальная страница IRON FACTORY в Facebook. Здесь мы публикуем новости клуба, анонсы тренировок, мотивационные посты и видео с наших занятий. Подписывайся, чтобы быть в курсе всех событий и акций!</p></div>
+                <div class="social-links-block">
+                    <a href="https://facebook.com/ironfactory" target="_blank" class="social-page-btn facebook-btn">📘 ПЕРЕЙТИ В FACEBOOK</a>
+                    <button class="social-back-btn" onclick="showMain()">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="instagramPage" style="display: none;">
+        <div class="container">
+            <div class="social-page-header">
+                <div class="social-page-icon">📷</div>
+                <h1 class="social-page-title">IRON FACTORY в Instagram</h1>
+                <p class="social-page-desc">Смотри фото и видео тренировок!</p>
+            </div>
+            <div class="social-page-content">
+                <div class="social-stats">
+                    <div class="stat-card"><div class="stat-number">28 456</div><div class="stat-label">Подписчиков</div></div>
+                    <div class="stat-card"><div class="stat-number">2 389</div><div class="stat-label">Публикаций</div></div>
+                    <div class="stat-card"><div class="stat-number">156K</div><div class="stat-label">Охват</div></div>
+                </div>
+                <div class="social-description"><h3>📷 О нашем Instagram</h3><p>Самые яркие моменты тренировок, победы наших атлетов, советы от тренеров и закулисье IRON FACTORY. Подписывайся, чтобы не пропустить ничего интересного! Отмечай нас в своих Stories — мы публикуем лучшие моменты!</p></div>
+                <div class="social-links-block">
+                    <a href="https://instagram.com/ironfactory" target="_blank" class="social-page-btn instagram-btn">📷 ПЕРЕЙТИ В INSTAGRAM</a>
+                    <button class="social-back-btn" onclick="showMain()">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="telegramPage" style="display: none;">
+        <div class="container">
+            <div class="social-page-header">
+                <div class="social-page-icon">💬</div>
+                <h1 class="social-page-title">IRON FACTORY в Telegram</h1>
+                <p class="social-page-desc">Будь в курсе всех новостей!</p>
+            </div>
+            <div class="social-page-content">
+                <div class="social-stats">
+                    <div class="stat-card"><div class="stat-number">9 873</div><div class="stat-label">Подписчиков</div></div>
+                    <div class="stat-card"><div class="stat-number">124</div><div class="stat-label">Постов</div></div>
+                    <div class="stat-card"><div class="stat-number">24/7</div><div class="stat-label">Поддержка</div></div>
+                </div>
+                <div class="social-description"><h3>💬 О нашем Telegram-канале</h3><p>Оперативные новости, анонсы акций, ответы на вопросы. В Telegram мы публикуем самую свежую информацию первой! Подпишись и получай уведомления о новых тренировках и скидках.</p></div>
+                <div class="social-links-block">
+                    <a href="https://t.me/ironfactory" target="_blank" class="social-page-btn telegram-btn">💬 ПЕРЕЙТИ В TELEGRAM</a>
+                    <button class="social-back-btn" onclick="showMain()">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tiktokPage" style="display: none;">
+        <div class="container">
+            <div class="social-page-header">
+                <div class="social-page-icon">🎵</div>
+                <h1 class="social-page-title">IRON FACTORY в TikTok</h1>
+                <p class="social-page-desc">Крутые видео тренировок!</p>
+            </div>
+            <div class="social-page-content">
+                <div class="social-stats">
+                    <div class="stat-card"><div class="stat-number">52 109</div><div class="stat-label">Подписчиков</div></div>
+                    <div class="stat-card"><div class="stat-number">892K</div><div class="stat-label">Лайков</div></div>
+                    <div class="stat-card"><div class="stat-number">187</div><div class="stat-label">Видео</div></div>
+                </div>
+                <div class="social-description"><h3>🎵 О нашем TikTok</h3><p>Заводные ролики с тренировок, челленджи, мотивационные нарезки и лайфхаки от наших тренеров. Подписывайся на наш TikTok — будет жарко! Участвуй в наших челленджах и выигрывай призы!</p></div>
+                <div class="social-links-block">
+                    <a href="https://tiktok.com/@ironfactory" target="_blank" class="social-page-btn tiktok-btn">🎵 ПЕРЕЙТИ В TIKTOK</a>
+                    <button class="social-back-btn" onclick="showMain()">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="youtubePage" style="display: none;">
+        <div class="container">
+            <div class="social-page-header">
+                <div class="social-page-icon">▶️</div>
+                <h1 class="social-page-title">IRON FACTORY на YouTube</h1>
+                <p class="social-page-desc">Смотри обучающие видео и тренировки!</p>
+            </div>
+            <div class="social-page-content">
+                <div class="social-stats">
+                    <div class="stat-card"><div class="stat-number">34 567</div><div class="stat-label">Подписчиков</div></div>
+                    <div class="stat-card"><div class="stat-number">156</div><div class="stat-label">Видео</div></div>
+                    <div class="stat-card"><div class="stat-number">1.2M</div><div class="stat-label">Просмотров</div></div>
+                </div>
+                <div class="social-description"><h3>▶️ О нашем YouTube-канале</h3><p>Полные тренировки, разборы упражнений, советы от чемпионов и мотивационные видео. Подписывайся на наш канал и прокачивай себя вместе с нами! Новые видео каждую неделю — не пропусти!</p></div>
+                <div class="social-links-block">
+                    <a href="https://youtube.com/@ironfactory" target="_blank" class="social-page-btn youtube-btn">▶️ ПЕРЕЙТИ НА YOUTUBE</a>
+                    <button class="social-back-btn" onclick="showMain()">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ПОДВАЛ ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">🔩 IRON<span>FACTORY</span></div>
+                    <p class="footer-description">Куем железо. Куем характер. Куем победу. Твой путь к силе начинается здесь.</p>
+                    <div class="footer-social">
+    <a href="#" class="social-icon" data-social="facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+        </svg>
+    </a>
+    <a href="#" class="social-icon" data-social="instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="white" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5"/>
+            <circle cx="17" cy="7" r="1" fill="white"/>
+        </svg>
+    </a>
+    <a href="#" class="social-icon" data-social="telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.6-1.38-.97-2.23-1.56-.99-.67-.35-1.04.22-1.64.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.07-.04-.1-.05-.03-.12-.01-.18.02-.08.04-2.68 1.7-3.78 2.39-.36.24-.68.36-1.07.35-.35-.01-1.03-.2-1.54-.36-.62-.2-1.11-.3-1.07-.64.02-.18.26-.36.72-.55 2.72-1.18 4.53-1.96 5.44-2.33 2.59-1.06 3.13-1.24 3.48-1.25.08 0 .25.02.36.12.09.08.12.19.13.3-.01.09-.07.49-.13.89z"/>
+        </svg>
+    </a>
+    <a href="#" class="social-icon" data-social="tiktok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4c0 1.46-1.18 2.66-2.64 2.66-1.46 0-2.64-1.2-2.64-2.66 0-1.46 1.18-2.64 2.64-2.64.27 0 .53.04.78.12v-3.12c-.26-.04-.52-.06-.78-.06-3.17 0-5.74 2.57-5.74 5.74 0 3.17 2.57 5.74 5.74 5.74 3.17 0 5.74-2.57 5.74-5.74V9.89c.96.68 2.13 1.08 3.41 1.08V7.86c-.91 0-1.77-.3-2.46-.82z"/>
+        </svg>
+    </a>
+    <a href="#" class="social-icon" data-social="youtube">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5 3-5 3z"/>
+        </svg>
+    </a>
+</div>
+                </div>
+                <div class="footer-col">
+                    <h4>⚡ БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" id="footerMainLink">Главная</a></li>
+                        <li><a href="#" id="footerTrainingsLink">Тренировки</a></li>
+                        <li><a href="#" id="footerSubscriptionsLink">Абонементы</a></li>
+                        <li><a href="#" id="footerContactsLink">Контакты</a></li>
+                        <li><a href="#" id="footerBookingLink">Запись на тренировку</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>📞 КОНТАКТЫ</h4>
+                    <ul class="footer-contacts">
+                        <li><span class="contact-icon">📍</span><span>г. Москва, ул. Железная, 15<br>ТЦ "Сталь", 3 этаж</span></li>
+                        <li><span class="contact-icon">📞</span><span>+7 (999) 777-88-99</span></li>
+                        <li><span class="contact-icon">✉️</span><span>ironfactory@club.ru</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>🕐 МЫ РАБОТАЕМ</h4>
+                    <div class="working-hours">
+                        <div class="hour-item"><span>Понедельник - Воскресенье:</span><strong>КРУГЛОСУТОЧНО</strong></div>
+                        <div class="hour-item"><span>Праздничные дни:</span><strong>КРУГЛОСУТОЧНО</strong></div>
+                    </div>
+                    <div class="footer-badge"><span>🏆 Лучший спортклуб 2025</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Оферта</a>
+                </div>
+                <p class="copyright">© 2026 IRON FACTORY. Все права защищены. Куем железо вместе!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentUser = null;
+
+        function saveUserToStorage(user) {
+            let users = JSON.parse(localStorage.getItem('ironfactory_users') || '[]');
+            const idx = users.findIndex(u => u.email === user.email);
+            if (idx >= 0) users[idx] = user;
+            else users.push(user);
+            localStorage.setItem('ironfactory_users', JSON.stringify(users));
+        }
+
+        function getUserByEmail(email) {
+            const users = JSON.parse(localStorage.getItem('ironfactory_users') || '[]');
+            return users.find(u => u.email === email);
+        }
+
+        function loginUser(email, password) {
+            const user = getUserByEmail(email);
+            if (user && user.password === password) {
+                currentUser = user;
+                localStorage.setItem('ironfactory_currentUser', JSON.stringify(user));
+                updateUIForLoggedInUser();
+                closeAuthModal();
+                showMain();
+                alert(`✅ Добро пожаловать, ${user.fullname}!`);
+                return true;
+            }
+            alert('❌ Неверный email или пароль!');
+            return false;
+        }
+
+        function registerUser(userData) {
+            if (getUserByEmail(userData.email)) { alert('❌ Email уже существует!'); return false; }
+            userData.id = Date.now();
+            userData.bookings = [];
+            userData.history = [];
+            userData.registrationDate = new Date().toLocaleDateString('ru-RU');
+            saveUserToStorage(userData);
+            currentUser = userData;
+            localStorage.setItem('ironfactory_currentUser', JSON.stringify(userData));
+            updateUIForLoggedInUser();
+            closeAuthModal();
+            showMain();
+            alert(`✅ Регистрация успешна, ${userData.fullname}!`);
+            return true;
+        }
+
+        function logoutUser() {
+            currentUser = null;
+            localStorage.removeItem('ironfactory_currentUser');
+            updateUIForLoggedOutUser();
+            showMain();
+            alert('👋 Вы вышли из аккаунта');
+        }
+
+        function updateUIForLoggedInUser() {
+            const nameSpan = document.getElementById('userNameDisplay');
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (currentUser) {
+                nameSpan.textContent = `👤 ${currentUser.fullname.split(' ')[0]}`;
+                nameSpan.style.display = 'inline';
+                logoutBtn.style.display = 'inline-block';
+                document.getElementById('profileName').textContent = currentUser.fullname;
+                document.getElementById('profilePhone').textContent = currentUser.phone;
+                document.getElementById('profileEmail').textContent = currentUser.email;
+                document.getElementById('profileBirthday').textContent = currentUser.birthday || 'не указано';
+                document.getElementById('profileRegDate').textContent = currentUser.registrationDate;
+                document.getElementById('profileWelcomeText').textContent = `Добро пожаловать, ${currentUser.fullname}!`;
+            }
+        }
+
+        function updateUIForLoggedOutUser() {
+            document.getElementById('userNameDisplay').style.display = 'none';
+            document.getElementById('logoutBtn').style.display = 'none';
+        }
+
+        const mainPage = document.getElementById('mainPage');
+        const trainingsPage = document.getElementById('trainingsPage');
+        const subscriptionsPage = document.getElementById('subscriptionsPage');
+        const contactsPage = document.getElementById('contactsPage');
+        const bookingPage = document.getElementById('bookingPage');
+        const profilePage = document.getElementById('profilePage');
+        const authModal = document.getElementById('authModal');
+        const editProfileModal = document.getElementById('editProfileModal');
+        const subscriptionModal = document.getElementById('subscriptionModal');
+        const successModal = document.getElementById('successModal');
+
+        const facebookPage = document.getElementById('facebookPage');
+        const instagramPage = document.getElementById('instagramPage');
+        const telegramPage = document.getElementById('telegramPage');
+        const tiktokPage = document.getElementById('tiktokPage');
+        const youtubePage = document.getElementById('youtubePage');
+
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        
+        function showMain() { 
+            mainPage.style.display = 'block'; 
+            trainingsPage.style.display = 'none'; 
+            subscriptionsPage.style.display = 'none'; 
+            contactsPage.style.display = 'none'; 
+            bookingPage.style.display = 'none'; 
+            profilePage.style.display = 'none';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+        
+        function showTrainings() { 
+            mainPage.style.display = 'none'; 
+            trainingsPage.style.display = 'block'; 
+            subscriptionsPage.style.display = 'none'; 
+            contactsPage.style.display = 'none'; 
+            bookingPage.style.display = 'none'; 
+            profilePage.style.display = 'none';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+        
+        function showSubscriptions() { 
+            mainPage.style.display = 'none'; 
+            trainingsPage.style.display = 'none'; 
+            subscriptionsPage.style.display = 'block'; 
+            contactsPage.style.display = 'none'; 
+            bookingPage.style.display = 'none'; 
+            profilePage.style.display = 'none';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+        
+        function showContacts() { 
+            mainPage.style.display = 'none'; 
+            trainingsPage.style.display = 'none'; 
+            subscriptionsPage.style.display = 'none'; 
+            contactsPage.style.display = 'block'; 
+            bookingPage.style.display = 'none'; 
+            profilePage.style.display = 'none';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+        
+        function showBooking() { 
+            if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; } 
+            mainPage.style.display = 'none'; 
+            trainingsPage.style.display = 'none'; 
+            subscriptionsPage.style.display = 'none'; 
+            contactsPage.style.display = 'none'; 
+            bookingPage.style.display = 'block'; 
+            profilePage.style.display = 'none';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+        
+        function showProfile() { 
+            if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; } 
+            mainPage.style.display = 'none'; 
+            trainingsPage.style.display = 'none'; 
+            subscriptionsPage.style.display = 'none'; 
+            contactsPage.style.display = 'none'; 
+            bookingPage.style.display = 'none'; 
+            profilePage.style.display = 'block';
+            if(facebookPage) facebookPage.style.display = 'none';
+            if(instagramPage) instagramPage.style.display = 'none';
+            if(telegramPage) telegramPage.style.display = 'none';
+            if(tiktokPage) tiktokPage.style.display = 'none';
+            if(youtubePage) youtubePage.style.display = 'none';
+            scrollToTop(); 
+        }
+
+        function showFacebook() {
+            hideAllPages();
+            if(facebookPage) facebookPage.style.display = 'block';
+            scrollToTop();
+        }
+
+        function showInstagram() {
+            hideAllPages();
+            if(instagramPage) instagramPage.style.display = 'block';
+            scrollToTop();
+        }
+
+        function showTelegram() {
+            hideAllPages();
+            if(telegramPage) telegramPage.style.display = 'block';
+            scrollToTop();
+        }
+
+        function showTikTok() {
+            hideAllPages();
+            if(tiktokPage) tiktokPage.style.display = 'block';
+            scrollToTop();
+        }
+
+        function showYouTube() {
+            hideAllPages();
+            if(youtubePage) youtubePage.style.display = 'block';
+            scrollToTop();
+        }
+
+        function hideAllPages() {
+            mainPage.style.display = 'none';
+            trainingsPage.style.display = 'none';
+            subscriptionsPage.style.display = 'none';
+            contactsPage.style.display = 'none';
+            bookingPage.style.display = 'none';
+            profilePage.style.display = 'none';
+        }
+
+        function openAuthModal() { authModal.style.display = 'block'; }
+        function closeAuthModal() { authModal.style.display = 'none'; document.getElementById('loginForm').reset(); document.getElementById('registerForm').reset(); }
+
+        document.getElementById('mainLink').onclick = (e) => { e.preventDefault(); showMain(); };
+        document.getElementById('trainingsLink').onclick = (e) => { e.preventDefault(); showTrainings(); };
+        document.getElementById('subscriptionsLink').onclick = (e) => { e.preventDefault(); showSubscriptions(); };
+        document.getElementById('contactsLink').onclick = (e) => { e.preventDefault(); showContacts(); };
+        document.getElementById('bookingLink').onclick = (e) => { e.preventDefault(); showBooking(); };
+        document.getElementById('profileLink').onclick = (e) => { e.preventDefault(); showProfile(); };
+        document.getElementById('heroBtn').onclick = (e) => { e.preventDefault(); showBooking(); };
+        document.getElementById('logoutBtn').onclick = () => logoutUser();
+        document.querySelector('.logo').onclick = () => showMain();
+
+        document.getElementById('footerMainLink')?.addEventListener('click', (e) => { e.preventDefault(); showMain(); });
+        document.getElementById('footerTrainingsLink')?.addEventListener('click', (e) => { e.preventDefault(); showTrainings(); });
+        document.getElementById('footerSubscriptionsLink')?.addEventListener('click', (e) => { e.preventDefault(); showSubscriptions(); });
+        document.getElementById('footerContactsLink')?.addEventListener('click', (e) => { e.preventDefault(); showContacts(); });
+        document.getElementById('footerBookingLink')?.addEventListener('click', (e) => { e.preventDefault(); showBooking(); });
+
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+                const social = this.getAttribute('data-social');
+                switch(social) {
+                    case 'facebook': showFacebook(); break;
+                    case 'instagram': showInstagram(); break;
+                    case 'telegram': showTelegram(); break;
+                    case 'tiktok': showTikTok(); break;
+                    case 'youtube': showYouTube(); break;
+                    default: break;
+                }
+            });
+        });
+
+        document.getElementById('showRegisterBtn')?.addEventListener('click', () => { document.getElementById('loginForm').style.display = 'none'; document.getElementById('registerForm').style.display = 'block'; });
+        document.getElementById('showLoginBtn')?.addEventListener('click', () => { document.getElementById('loginForm').style.display = 'block'; document.getElementById('registerForm').style.display = 'none'; });
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => { e.preventDefault(); loginUser(document.getElementById('loginEmail').value, document.getElementById('loginPassword').value); });
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pwd = document.getElementById('regPassword').value;
+            const conf = document.getElementById('regConfirmPassword').value;
+            if (pwd !== conf) { alert('❌ Пароли не совпадают!'); return; }
+            if (pwd.length < 6) { alert('❌ Пароль минимум 6 символов!'); return; }
+            registerUser({ fullname: document.getElementById('regFullname').value, phone: document.getElementById('regPhone').value, email: document.getElementById('regEmail').value, birthday: document.getElementById('regBirthday').value, password: pwd });
+        });
+
+        document.getElementById('editProfileBtn').onclick = () => { if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; } document.getElementById('editFullname').value = currentUser.fullname; document.getElementById('editPhone').value = currentUser.phone; document.getElementById('editEmail').value = currentUser.email; document.getElementById('editBirthday').value = currentUser.birthday || ''; editProfileModal.style.display = 'block'; };
+        document.getElementById('editProfileForm').addEventListener('submit', (e) => { e.preventDefault(); if (currentUser) { currentUser.fullname = document.getElementById('editFullname').value; currentUser.phone = document.getElementById('editPhone').value; currentUser.email = document.getElementById('editEmail').value; currentUser.birthday = document.getElementById('editBirthday').value; saveUserToStorage(currentUser); localStorage.setItem('ironfactory_currentUser', JSON.stringify(currentUser)); updateUIForLoggedInUser(); editProfileModal.style.display = 'none'; alert('✅ Профиль обновлен!'); } });
+
+        document.querySelectorAll('.modal-close, .edit-modal-cancel').forEach(btn => btn?.addEventListener('click', () => editProfileModal.style.display = 'none'));
+        window.addEventListener('click', (e) => { if (e.target === authModal) closeAuthModal(); if (e.target === editProfileModal) editProfileModal.style.display = 'none'; if (e.target === subscriptionModal) subscriptionModal.style.display = 'none'; if (e.target === successModal) successModal.style.display = 'none'; });
+
+        document.querySelectorAll('.profile-tab').forEach(tab => { tab.addEventListener('click', function() { document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active')); this.classList.add('active'); const tabName = this.getAttribute('data-tab'); document.getElementById('activeBookings').style.display = tabName === 'active' ? 'block' : 'none'; document.getElementById('historyBookings').style.display = tabName === 'history' ? 'block' : 'none'; }); });
+        window.cancelBooking = function(btn) { if (confirm('Отменить запись?')) btn.closest('.booking-item').remove(); };
+
+        document.querySelectorAll('.book-training').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; } localStorage.setItem('selectedTraining', btn.getAttribute('data-training')); showBooking(); }); });
+        document.getElementById('bookingForm')?.addEventListener('submit', (e) => { e.preventDefault(); if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; } alert('✅ Заявка отправлена!'); e.target.reset(); showMain(); });
+
+        const savedTraining = localStorage.getItem('selectedTraining');
+        if (savedTraining) { const select = document.getElementById('trainingSelect'); if (select) { for (let i = 0; i < select.options.length; i++) { if (select.options[i].value === savedTraining) { select.selectedIndex = i; break; } } } localStorage.removeItem('selectedTraining'); }
+
+        let selectedSubscription = null;
+        let selectedSubscriptionPrice = 0;
+        const discounts = { '1': 0, '3': 5, '6': 10, '12': 15 };
+
+        function updateTotalPrice() {
+            const duration = document.getElementById('subDuration').value;
+            const discount = discounts[duration] || 0;
+            const promo = document.getElementById('subPromo').value;
+            let total = selectedSubscriptionPrice * (1 - discount / 100);
+            if (promo && promo.toUpperCase() === 'IRON10') total = total * 0.9;
+            document.getElementById('subTotalAmount').textContent = Math.round(total).toLocaleString() + ' ₽';
+        }
+
+        function openSubscriptionModal(name, price) {
+            if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; }
+            selectedSubscription = name;
+            selectedSubscriptionPrice = price;
+            document.getElementById('subFullname').value = currentUser.fullname || '';
+            document.getElementById('subPhone').value = currentUser.phone || '';
+            document.getElementById('subEmail').value = currentUser.email || '';
+            updateTotalPrice();
+            subscriptionModal.style.display = 'block';
+        }
+
+        document.getElementById('subDuration')?.addEventListener('change', updateTotalPrice);
+        document.getElementById('subPromo')?.addEventListener('input', updateTotalPrice);
+        document.getElementById('closeSubModal')?.addEventListener('click', () => subscriptionModal.style.display = 'none');
+
+        document.getElementById('subscriptionPurchaseForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fullname = document.getElementById('subFullname').value;
+            const phone = document.getElementById('subPhone').value;
+            const email = document.getElementById('subEmail').value || 'не указан';
+            const payment = document.getElementById('subPayment').options[document.getElementById('subPayment').selectedIndex]?.text || 'не выбран';
+            const durationVal = document.getElementById('subDuration').value;
+            const durationText = document.getElementById('subDuration').options[document.getElementById('subDuration').selectedIndex]?.text || '1 месяц';
+            const total = document.getElementById('subTotalAmount').textContent;
+            if (!fullname || !phone || !document.getElementById('subPayment').value) { alert('❌ Заполните все поля!'); return; }
+
+            const validUntil = new Date();
+            validUntil.setMonth(validUntil.getMonth() + parseInt(durationVal));
+            const validUntilStr = validUntil.toLocaleDateString('ru-RU');
+
+            document.getElementById('successSubscription').textContent = selectedSubscription;
+            document.getElementById('successAmount').textContent = total;
+            document.getElementById('successDuration').textContent = durationText;
+            document.getElementById('successPayment').textContent = payment;
+            document.getElementById('successValidUntil').textContent = validUntilStr;
+
+            subscriptionModal.style.display = 'none';
+            successModal.style.display = 'block';
+        });
+
+        document.getElementById('closeSuccessModal')?.addEventListener('click', () => successModal.style.display = 'none');
+
+        document.querySelectorAll('.btn-subscribe').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!currentUser) { alert('⚠️ Войдите в аккаунт!'); openAuthModal(); return; }
+                const card = this.closest('.subscription-card');
+                const title = card.querySelector('h3').textContent;
+                const priceText = card.querySelector('.subscription-price').textContent;
+                const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                openSubscriptionModal(title, price);
+            });
+        });
+
+        (function checkAuth() { const saved = localStorage.getItem('ironfactory_currentUser'); if (saved) { currentUser = JSON.parse(saved); updateUIForLoggedInUser(); } })();
+    </script>
+</body>
+</html>
